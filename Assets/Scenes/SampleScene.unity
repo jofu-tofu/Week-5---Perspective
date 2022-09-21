@@ -793,7 +793,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -933,7 +933,7 @@ PrefabInstance:
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 55
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 1432276023}
   - component: {fileID: 1432276022}
   - component: {fileID: 1432276021}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ClownNose
   m_TagString: Untagged
   m_Icon: {fileID: 0}

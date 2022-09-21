@@ -13,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - IgnoreCamera
-  - 
+  - Ignore 3rd Person Camera
+  - Ignore 1st Person Camera
   - 
   - 
   - 
