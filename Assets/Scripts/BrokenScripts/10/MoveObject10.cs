@@ -4,39 +4,46 @@ using UnityEngine;
 
 public class MoveObject10 : MonoBehaviour
 {
-    //float moveSpeed;
-    //[SerializeField] Vector3 moveDirection;
+    //6
+    [SerializeField]float moveSpeed;
 
-    //totalMoveDistance;
-    //Vector3 startingLocation;
+    [SerializeField] Vector3 moveDirection;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    totalMoveDistance = 10f;
-    //    startingLocation = gameObject.transform.position;
-    //}
+//8
+    float totalMoveDistance;
+    Vector3 startingLocation;
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    float distanceTraveled = GetDistanceTraveled();
+    // Start is called before the first frame update
+    void Start()
+    {
+       totalMoveDistance = 10f;
+       startingLocation = gameObject.transform.position;
+    }
 
-    //    if (distanceTraveled > totalMoveDistance)
-    //    {
-    //        FlipMoveDirection();
-    //    }
+    // Update is called once per frame
+    void Update()
+    {
+       float distanceTraveled = GetDistanceTraveled();
 
-    //    gameObject.transform.Translate(moveDirection * moveSpeed);
-    //}
+       if (distanceTraveled > totalMoveDistance)
+       {
+           FlipMoveDirection();
+           this.enabled = false;
+           //need to stop the script so the door will stop moving after a certain distance
+       }
 
-    //void FlipMoveDirection()
-    //{
-    //    moveDirection = -moveDirection;
-    //}
+       gameObject.transform.Translate(moveDirection * moveSpeed);
+    }
 
-    //float GetDistanceTraveled()
-    //{
-    //    return Vector3.Distance(gameObject.transform.position, startingLocation);
-    //}
+    void FlipMoveDirection()
+    {
+       moveDirection = -moveDirection;
+       startingLocation = gameObject.transform.position;
+       //9
+    }
+
+    float GetDistanceTraveled()
+    {
+       return Vector3.Distance(gameObject.transform.position, startingLocation);
+    }
 }

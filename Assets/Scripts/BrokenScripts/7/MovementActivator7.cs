@@ -16,14 +16,17 @@ public class MovementActivator7 : MonoBehaviour
     void Update()
     {
         
-    }
+    }  
 
-    private void onTriggerEnter(Collider other)
+    //shuld be uppercase O instead of lowercase for OnTrigger
+    private void OnTriggerEnter(Collider other)
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+
+    // typo in onTrigger
+    private void OnTriggerExit(Collider other)
     {
         objectToActivate.GetComponent<MoveObject7>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject7>().enabled = true;

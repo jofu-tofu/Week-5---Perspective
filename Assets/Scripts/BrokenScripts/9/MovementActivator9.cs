@@ -5,7 +5,10 @@ using UnityEngine;
 public class MovementActivator9 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
+   
+
+   //9: need to serialize other object so it shows up in unity
+    [SerializeField]GameObject otherObjectToActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +21,14 @@ public class MovementActivator9 : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other)
+    // 7
+    private void OnTriggerEnter(Collider other)
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
     }
-    private void pnTriggerExit(Collider other)
+    //7
+    private void OnTriggerExit(Collider other)
     {
         objectToActivate.GetComponent<MoveObject9>().enabled = true;
         otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;

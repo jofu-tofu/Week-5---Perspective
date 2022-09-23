@@ -5,7 +5,9 @@ using UnityEngine;
 public class MovementActivator10 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
+
+    //9
+    [SerializeField]GameObject otherObjectToActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +20,17 @@ public class MovementActivator10 : MonoBehaviour
         
     }
 
+
+
+//component needs to reference the move object in scene 10, not 9
     private void OnTriggerEnter(Collider other)
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true;
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true;
     }
     private void OnTriggerExit(Collider other)
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true;
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true;
     }
 }
